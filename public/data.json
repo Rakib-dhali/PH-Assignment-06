@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "SEO Booster Pro",
+    "description": "Skyrocket your website rankings with AI-powered keyword research and on-page optimization.",
+    "price": 35,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["Unlimited keyword tracking", "Competitor analysis", "Weekly SEO reports"],
+    "icon": "/assets/products/seo.png"
+  },
+  {
+    "id": 2,
+    "name": "UI Component Library",
+    "description": "500+ ready-to-use React and Tailwind components to ship products faster than ever.",
+    "price": 59,
+    "period": "one-time",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["500+ components", "Figma source files", "Lifetime updates"],
+    "icon": "/assets/products/ui.png"
+  },
+  {
+    "id": 3,
+    "name": "Video Editing Suite",
+    "description": "Edit, trim, and export stunning videos online without installing any software.",
+    "price": 24,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["4K export", "100+ transitions", "No watermark"],
+    "icon": "/assets/products/video.png"
+  },
+  {
+    "id": 4,
+    "name": "Email Marketing Hub",
+    "description": "Design, send, and track email campaigns that convert leads into loyal customers.",
+    "price": 49,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["Unlimited subscribers", "A/B testing", "Advanced analytics"],
+    "icon": "/assets/products/email.png"
+  },
+  {
+    "id": 5,
+    "name": "Invoice & Billing Starter",
+    "description": "Send professional invoices, track payments, and manage clients all in one place.",
+    "price": 12,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Unlimited invoices", "Multi-currency support", "Export to PDF"],
+    "icon": "/assets/products/invoice.png"
+  },
+  {
+    "id": 6,
+    "name": "Brand Identity Kit",
+    "description": "Build a consistent brand with logo makers, color palettes, and typography tools.",
+    "price": 45,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["Logo generator", "Brand style guide", "Asset export in all formats"],
+    "icon": "/assets/products/identity.png"
+  }
+]
