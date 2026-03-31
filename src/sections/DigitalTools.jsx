@@ -40,7 +40,7 @@ const DigitalTools = ({ cartCount, setCartCount }) => {
           </button>
         </div>
       </div>
-      <Suspense fallback={<div>loading...</div>}>
+      <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
         {toggleBtn === "product" ? (
           <Carts
             addedProducts={addedProducts}
