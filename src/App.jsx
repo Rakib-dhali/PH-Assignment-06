@@ -3,6 +3,7 @@ import Banner from "./sections/Banner";
 import Stats from "./sections/Stats";
 import DigitalTools from "./sections/DigitalTools";
 import { useState } from "react";
+import StepsSection from "./sections/StepsSection";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <Stats />
       <DigitalTools cartCount={cartCount} setCartCount={setCartCount} />
+      <StepsSection />
     </>
   );
 }

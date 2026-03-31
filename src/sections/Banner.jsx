@@ -31,7 +31,7 @@ const Banner = () => {
             <div className="flex-center gap-1 rounded-full p-4  bg-white ">
               <img
                 className="size-5"
-                src="https://img.icons8.com/nolan/64/play.png"
+                src="/assets/Play.png"
                 alt="play"
               />
               <span className=" font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
