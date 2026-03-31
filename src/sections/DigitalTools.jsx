@@ -2,15 +2,16 @@ import { Suspense, useState } from "react";
 import Carts from "../components/Carts";
 import AddedProducts from "../components/AddedProducts";
 
-const DigitalTools = () => {
-  const fetchData = async () => {
-    const res = await fetch("/data.json");
-    return res.json();
-  };
-  const promise = fetchData();
+const fetchData = async () => {
+  const res = await fetch("/data.json");
+  return res.json();
+};
+const promise = fetchData();
 
+const DigitalTools = ({ cartCount, setCartCount }) => {
   const [toggleBtn, setToggleBtn] = useState("product");
-  const [addedProducts, setAddedProducts] = useState([])
+  const [addedProducts, setAddedProducts] = useState([]);
+  setCartCount(addedProducts.length);
 
   return (
     <div className="max-w-400 py-10 md:py-30 sm:px-7 md:px-10 lg:px-20 xl:px-30 2xl:px-40 flex flex-col gap-10 items-center">
@@ -33,12 +34,24 @@ const DigitalTools = () => {
             onClick={() => setToggleBtn("cart")}
             className={`${toggleBtn === "cart" ? " bg-linear-to-r from-[#4F39F6] to-[#9514FA] drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] text-white " : " text-[#25065D] font-medium"} rounded-full px-7 py-3.5 `}
           >
-            Cart(4)
+            Cart({cartCount})
           </button>
         </div>
       </div>
       <Suspense fallback={<div>loading...</div>}>
-      {toggleBtn ==="product"? <Carts addedProducts={addedProducts} setAddedProducts={setAddedProducts} promise={promise}/>:<AddedProducts setAddedProducts={setAddedProducts} addedProducts={addedProducts} /> }
+        {toggleBtn === "product" ? (
+          <Carts
+            addedProducts={addedProducts}
+            setAddedProducts={setAddedProducts}
+            promise={promise}
+          />
+        ) : (
+          <AddedProducts
+            setAddedProducts={setAddedProducts}
+            addedProducts={addedProducts}
+            setToggleBtn={setToggleBtn}
+          />
+        )}
       </Suspense>
     </div>
   );

@@ -1,7 +1,7 @@
 import { FiShoppingCart } from "react-icons/fi";
 import Menu from "../components/Menu";
 
-const Nav = () => {
+const Nav = ({ cartCount }) => {
   return (
     <div className="w-full relative md:max-w-400 border-b border-b-[#F2F2F2] py-2 md:py-4 p-5 sm:px-7 md:px-10 lg:px-20 xl:px-30 2xl:px-40 flex items-center justify-between">
       <div className="flex items-center justify-center gap-3">
@@ -32,9 +32,11 @@ const Nav = () => {
       <div className="flex items-center justify-center gap-2 md:gap-4">
         <div className="cursor-pointer relative w-fit">
           <FiShoppingCart className="text-2xl" />
-          <span className="absolute -top-2 -right-2 z-10 bg-red-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">
-            9
-          </span>
+          {cartCount !== 0 ? (
+            <span className="absolute -top-2 -right-2 z-10 bg-red-500 text-white text-xs size-4 rounded-full flex items-center justify-center">
+              {cartCount}
+            </span>
+          ) : null}
         </div>
         <button className="cursor-pointer text-[#101727] leading-[1.2] font-bold">
           Login

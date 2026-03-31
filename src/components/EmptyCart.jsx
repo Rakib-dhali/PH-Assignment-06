@@ -1,16 +1,9 @@
+import cartImage from "/assets/cart.svg";
 
-
-   const EmptyCart = ({ onBrowse }) => {
+const EmptyCart = ({ setToggleBtn }) => {
   return (
-    <div className="flex flex-col items-center justify-center py-16 px-6 text-center">
-      <div className="relative mb-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 100"
-          className="w-32 h-32"
-        > </svg>
-      </div>
-
+    <div className="w-full flex flex-col items-center justify-center py-16 px-6 text-center">
+      <img src={cartImage} alt="cartImage" />
       <h2 className="text-xl font-medium text-gray-900 mb-2">
         Your cart is empty
       </h2>
@@ -19,7 +12,7 @@
       </p>
 
       <button
-        onClick={onBrowse}
+        onClick={() => setToggleBtn("product")}
         className="px-6 py-2.5 rounded-lg text-sm font-medium text-white"
         style={{ background: "#7226FB" }}
       >

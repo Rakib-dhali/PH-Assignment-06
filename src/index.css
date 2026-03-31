@@ -8,7 +8,8 @@
   font-family: "Manrope", sans-serif;
 }
 
-li, button {
+li,
+button {
   cursor: pointer;
 }
 
@@ -17,7 +18,7 @@ li, button {
 }
 
 .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
