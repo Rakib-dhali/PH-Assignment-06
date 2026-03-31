@@ -4,7 +4,7 @@ import { FaCheck } from "react-icons/fa";
 const Pricing = () => {
   return (
     <div className="max-w-400 py-10 md:py-30 sm:px-7 md:px-10 lg:px-20 xl:px-30 2xl:px-40 flex flex-col gap-6">
-      <h1 className="text-center text-[#101727] text-5xl font-extrabold">
+      <h1 className="text-center text-[#101727] text-3xl  md:text-5xl font-extrabold">
         Simple, Transparent Pricing
       </h1>
       <p className="leading-5 text-center text-[#627382]">

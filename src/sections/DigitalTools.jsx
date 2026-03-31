@@ -16,7 +16,7 @@ const DigitalTools = ({ cartCount, setCartCount }) => {
   return (
     <div className="max-w-400 py-10 md:py-30 sm:px-7 md:px-10 lg:px-20 xl:px-30 2xl:px-40 flex flex-col gap-10 items-center">
       <div className="flex-center flex-col gap-4 text-center ">
-        <h2 className="text-5xl font-extrabold text-[#101727]">
+        <h2 className="lg:text-5xl md:text-4xl text-3xl font-extrabold text-[#101727]">
           Premium Digital Tools
         </h2>
         <p className="text-[#627382] leading-5">
