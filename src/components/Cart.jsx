@@ -1,20 +1,23 @@
-import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Cart = ({ cart, setAddedProducts, addedProducts }) => {
-  const [cartStatus, setCartStatus] = useState("Buy Now");
-  const [isDisabled, setIsDisabled] = useState(false);
+  const isAdded = addedProducts.some((item) => item.id === cart.id);
+
+  const buyNow = () => {
+    if (isAdded) {
+      toast.error("Item already in the cart!");
+      return;
+    }
+    setAddedProducts([...addedProducts, cart]);
+    toast.success("Item added to the cart!");
+  };
   let badgeClassName =
     cart.tagType === "best seller"
       ? " bg-[#FEF3C6] text-[#BB4D00]"
       : cart.tagType === "new"
         ? " bg-[#DBFCE7] text-[#0A883E]"
         : "bg-[#E1E7FF] text-[#7226FB]";
-  const buyNow = () => {
-    setAddedProducts([...addedProducts, cart]);
-    setCartStatus("Added to Cart");
-    setIsDisabled(true);
-  };
 
   return (
     <div className="relative p-6 flex flex-col gap-4 rounded-2xl border-2 border-[#F2F2F2]">
@@ -43,11 +46,10 @@ const Cart = ({ cart, setAddedProducts, addedProducts }) => {
         ))}
       </ul>
       <button
-        disabled={isDisabled}
-        onClick={() => buyNow()}
-        className={`${cartStatus === "Buy Now" ? " bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : " bg-green-500"} rounded-full  text-white font-bold py-2`}
+        onClick={buyNow}
+        className={`${!isAdded ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "bg-green-500"} rounded-full text-white font-bold py-2`}
       >
-        {cartStatus}
+        {isAdded ? "Added to Cart" : "Buy Now"}
       </button>
     </div>
   );

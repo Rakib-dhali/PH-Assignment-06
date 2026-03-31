@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import EmptyCart from "./EmptyCart";
 
 const AddedProducts = ({ addedProducts, setAddedProducts, setToggleBtn }) => {
@@ -6,7 +7,13 @@ const AddedProducts = ({ addedProducts, setAddedProducts, setToggleBtn }) => {
       (added) => added.name !== product.name,
     );
     setAddedProducts(filteredProducts);
+    toast.warn("item removed from the cart")
   };
+
+  const handleProceed = () => {
+    setAddedProducts([]);
+    toast.success("Payment successful")
+  }
 
   const total = addedProducts.reduce((sum, p) => sum + p.price, 0);
 
@@ -58,7 +65,7 @@ const AddedProducts = ({ addedProducts, setAddedProducts, setToggleBtn }) => {
 
           <button
             className="font-bold  bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white py-4 text-center rounded-full"
-            onClick={() => setAddedProducts([])}
+            onClick={() => handleProceed()}
           >
             Proceed to checkout
           </button>

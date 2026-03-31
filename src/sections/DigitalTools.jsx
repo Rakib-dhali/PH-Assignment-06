@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect } from "react";
 import Carts from "../components/Carts";
 import AddedProducts from "../components/AddedProducts";
 
@@ -11,7 +11,9 @@ const promise = fetchData();
 const DigitalTools = ({ cartCount, setCartCount }) => {
   const [toggleBtn, setToggleBtn] = useState("product");
   const [addedProducts, setAddedProducts] = useState([]);
-  setCartCount(addedProducts.length);
+  useEffect(() => {
+    setCartCount(addedProducts.length);
+  });
 
   return (
     <div className="max-w-400 py-10 md:py-30 sm:px-7 md:px-10 lg:px-20 xl:px-30 2xl:px-40 flex flex-col gap-10 items-center">
