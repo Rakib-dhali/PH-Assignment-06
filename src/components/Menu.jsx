@@ -8,7 +8,7 @@ const Menu = () => {
       </div>
       <ul
         tabIndex="-1"
-        className="dropdown-content menu rounded-box z-1 w-52 p-2 shadow-sm leading-[1.2] font-semibold text-[#101727] flex items-center justify-center gap-2 mt-5"
+        className="dropdown-content bg-white menu rounded-box z-1 w-52 p-2 shadow-sm leading-[1.2] font-semibold text-[#101727] flex items-center justify-center gap-2 mt-5"
       >
         <li>
           <a>Products</a>
