@@ -12,7 +12,7 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
 
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative px-5">
       <div className="fixed top-0 left-0 right-0 z-50 bg-white">
       <Nav  cartCount={cartCount} /></div>
       <div className="pt-16 md:pt-20">
