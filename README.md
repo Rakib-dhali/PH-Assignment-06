@@ -3,6 +3,10 @@
 Crafted as Assignment 06 of Programming Hero Batch 13 (Game Changer Track), DigiTools pushes beyond static UIs into real product thinking — live cart state, smart duplicate prevention, async data loading with Suspense, and pixel-perfect responsive design.
 
 ---
+## 🔗 Live Demo
+
+[View Live](https://ph-assignment-06-eta.vercel.app/)
+---
 
 ## ⚡ Tech Stack
 
