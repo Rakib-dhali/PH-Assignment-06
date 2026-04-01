@@ -17,8 +17,7 @@ const Banner = () => {
           Supercharge Your <br /> Digital Workflow
         </h1>
         <p className="text-lg leading-7 md:text-left text-center text-[#627382]">
-          Access premium AI tools, design assets, templates, and productivity{" "}
-          
+          Access premium AI tools, design assets, templates, and productivity
           software—all in one place. Start creating faster 
           Explore Products
         </p>

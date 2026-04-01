@@ -12,8 +12,14 @@ li,
 button {
   cursor: pointer;
 }
-li{
-  display: flex; align-items: center; gap: 8px;
+li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: .8;
+}
+li:hover{
+  opacity: 1;
 }
 
 .font-inter {
@@ -24,4 +30,9 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+button:hover {
+  scale: 1.05;
+  transition: 100ms  ease-in-out ;
 }
